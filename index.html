@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazaar</title>
+</head>
+<body>
+    <header>
+        <h1>Базаар</h1>
+        <div class="buttons-container">
+            <button class="theme-toggle-btn" onclick="toggleTheme()">Зміна теми</button>
+            <button class="cart-btn" onclick="viewCart()">Переглянути кошик <span id="cartCount">0</span></button>
+        </div>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tab">
+            <button class="tablinks" onclick="openClothe(event, 'Paris')">Паріс2008</button>
+            <button class="tablinks" onclick="openClothe(event, 'Skini')">Скіні</button>
+            <button class="tablinks" onclick="openClothe(event, 'Campus')">Кампуси</button>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>Кофточка Паріж</h3>
+            <img src="paris.jpg" alt="paris" class="product-img">
+            <p class="price">19,99$</p>
+            <button type="button" class="add-to-cart-btn" onclick="addToCart('Кофточка Паріж', 19.99)">В кошик</button>
+        </div>
+
+        <div id="Skini" class="tabcontent">
+            <h3>Скіні в модє</h3>
+            <img src="skini.jpg" alt="skini" class="product-img">
+            <p class="price">28,52$</p>
+            <button type="button" class="add-to-cart-btn" onclick="addToCart('Скіні в модє', 28.52)">В кошик</button>
+        </div>
+
+        <div id="Campus" class="tabcontent">
+            <h3>Кампуси</h3>
+            <img src="campus.jpg" alt="campus" class="product-img">
+            <p class="price">52,99$</p>
+            <button type="button" class="add-to-cart-btn" onclick="addToCart('Кампуси', 52.99)">В кошик</button>
+        </div>
+    </div>
+
+    <div id="cart" class="cart-container">
+        <h2>Ваш кошик</h2>
+        <ul id="cartItems"></ul>
+        <p><strong>Total: $<span id="cartTotal">0</span></strong></p>
+        <button class="checkout-btn">Оформити замовлення</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
