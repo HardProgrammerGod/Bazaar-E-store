@@ -51,3 +51,25 @@ function viewCart() {
     const cartSection = document.getElementById('cart');
     cartSection.style.display = cartSection.style.display === 'none' ? 'block' : 'none';
 }
+
+// Snowflake animation
+
+function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.textContent = "❄";
+    snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // different speed of snow
+    snowflake.style.opacity = Math.random();
+    snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+    
+    document.body.appendChild(snowflake);
+
+    // remove snow after falling
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000);
+}
+
+// generate snowflakes at intervals 
+setInterval(createSnowflake, 100);
