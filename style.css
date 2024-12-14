@@ -159,3 +159,23 @@ h1 {
 .checkout-btn:hover {
     background-color: #e0a800;
 }
+
+
+/* Snowflake */
+.snowflake {
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 1000;
+    pointer-events: none;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
