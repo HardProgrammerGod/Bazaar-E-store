@@ -179,3 +179,12 @@ h1 {
         transform: translateY(100vh);
     }
 }
+
+/* change white into dark when theme is changing */
+.cart-container {
+    color: black;
+}
+
+body.dark-mode .cart-container {
+    color: black;
+}
